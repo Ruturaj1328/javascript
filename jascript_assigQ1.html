@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>password</td>
+            <td>
+                <input type="password" id="txt1" />
+            </td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td>
+                <input type="password" id="txt2" />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" id="btnsubbmit" value="Submit" onclick="sub()"/>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function sub() {
+            var password = document.getElementById("txt1").value;
+            var confirmpassword = document.getElementById("txt2").value;
+            if (password != confirmpassword) {
+                alert("password do not match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
