@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <script>
+        const no = [10, 3, 7, 30, 50, 40, 60, 80];
+
+         const result = no.filter(checkEven);// filter operation
+          const result2 = no.filter(check);
+          function checkEven(item) {
+              if (item % 2 == 0) {
+                  return item;
+              }
+        }
+        function check(val) {
+         return val>=18
+        }
+          console.log(result);
+          console.log(result2);
+
+        const result3=no.map(testfunc);; // map operation
+
+        function testfunc(item){{
+
+            var i=item;;
+
+            return item-(i*0.02);
+        }}
+
+        console.log(result3);;
+          
+    </script>
+
+</body>
+</html>
