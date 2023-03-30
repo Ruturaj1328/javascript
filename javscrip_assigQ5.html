@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+     <div id="d1"></div>
+    <script>
+        var Cities = ["Rahul", "Rohit", "Virat", "Akshay", "Kishor","Ajinkya","Mohit","Sushant","surya","vikram"];
+         var data = "<ol>";
+       
+
+        Cities.forEach(display);
+        function display(item) {
+             data += "<li>" + item + "</li>";
+            console.log(item);
+            
+        }
+      
+          data += "</ol>";
+          document.getElementById("d1").innerHTML = data;
+
+    </script>
+   
+</body>
+</html>

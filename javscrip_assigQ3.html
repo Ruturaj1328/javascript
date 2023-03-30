@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+   
+    <script>
+
+         var number = [1, 2, 3, 4, 6];
+         var data = "<ul>";
+        /* var result = 1;
+         for (var i = 0; i < number.length; i++) {
+             var result = result * (5 * number[i]);
+             data += "<li>" + number[i] + "</li>";
+         }*/
+         var result = number.map(testfunc);; // map operation
+
+         function testfunc(item) {
+             {
+
+                 var i = item;;
+                 data += "<li>" + (item*5) + "</li>";
+                 return i * 5;
+                
+             }
+         }
+
+         
+        data += "</ul>";;
+        console.log(result);;
+         document.getElementById("d1").innerHTML = data;
+         
+
+    </script>
+
+</body>
+</html>
