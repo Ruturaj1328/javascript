@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+   
+        var employees = [  { empid: 1, empname: 'John', salary: 50000 },  { empid: 2, empname: 'Jane', salary: 60000 },  { empid: 3, empname: 'Bob', salary: 55000 },  { empid: 4, empname: 'Alice', salary: 70000 },  { empid: 5, empname: 'Mike', salary: 65000 }];
+
+         var data = "<ol>";
+
+ var data = "<table border='1'><tr><th>empid</th><th>empname</th><th>salary</th></tr>";
+           for(var i=0;i<employees.length;i++){
+
+                   data += "</td><td>" + employees[i].empid + "</td><td>" + employees[i].empname + "</td><td>" + employees[i].salary
+                   + "</td></tr>";
+
+                
+            }
+       data += "</ol>";
+             // console.log(data);
+         document.getElementById("d1").innerHTML = data;
+
+console.log(employees);
+     
+    </script>
+</body>
+</html>

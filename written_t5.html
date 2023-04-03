@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <a href="home.html">Home</a> <br />
+
+    Enter Name :<input type="text" id="name-input" />
+    <button id="submit-btn">Submit</button>
+   
+    <script>
+
+const nameInput = document.getElementById('name-input');
+const submitBtn = document.getElementById('submit-btn');
+
+submitBtn.addEventListener('click', () => {
+            const name = nameInput.value;
+            sessionStorage.setItem('username', name);
+            alert(`Welcome, ${name}!`);
+});
+ const storedName = sessionStorage.getItem('username');
+
+
+    </script>
+
+
+
+</body>
+</html>
