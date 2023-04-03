@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <input type="button" value="Get All Data" onclick="getData()" /><br />
+    <script>
+        let promise = new Promise(function (resolve, reject) {
+            let req = new XMLHttpRequest();
+            req.open('GET', "https://jsonplaceholder.typicode.com/todos/");
+            req.onload = function () {
+               
+                if (req.status == 200) {
+                    resolve(req.response);
+                }
+                else {
+                    reject("Error in the application");
+                }
+            };
+            req.send();
+        });
+        function getData() {
+            promise.then(function (data){
+                displayAll(data)
+            }).catch (function(msg) {
+                console.log(msg);
+            })
+        }
+
+     var data = "";
+        var data = "<table border='1'><tr><th>User Id</th><th>Id</th><th>Title</th><th>Completed</th></tr>";
+        function displayAll(val) {
+            var list = JSON.parse(val);
+            for (var i = 0; i < list.length; i++) {
+                data += "<tr><td>" + list[i].userId + "</td><td>" + list[i].id + "</td><td>" + list[i].title + "</td><td>" + list[i].completed
+                    + "</td></tr>";
+
+            }
+            data += "</table>";
+            document.getElementById("d1").innerHTML = data;
+        }
+       
+var data;;
+fetch('https://jsonplaceholder.typicode.com/todos/')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        var Emp = [
+            {
+                id: 1,
+                Department: "HR",
+                name: "Rohan",
+                Salary: 30000
+            },
+            {
+                id: 2,
+                Department: "Testing",
+                name: "Rohit",
+                Salary: 30000
+
+            },
+            {
+                id: 3,
+                Department: "Development",
+                name: "Raju",
+                Salary: 30000
+            }
+        ];
+        console.log(Emp);
+        var data = "<table border='1'><tr><th>Id</th><th>Department</th><th>Name</th><th>Salary</th></tr>"
+        for (var i = 0; i < Emp.length; i++) {
+            data += "<tr><td>" + Emp[i].id + "</td><td>" + Emp[i].Department + "</td><td>" + Emp[i].name + "</td><td>" + Emp[i].Salary + "</td></tr>";
+        }
+        data += "</table>";
+        console.log(data);
+        document.getElementById("d1").innerHTML = data;
+    </script>
+</body>
+</html>

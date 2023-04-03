@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+          " use strict"
+        var Employee = {
+            name: "XyZ",
+            job: "Software",
+            salary: 30000,
+
+            print: function () {
+                return this.name + " " + this.job + " " + this.salary;
+            },
+            calculate: function () {
+                var sa;
+                sa = Employee.salary * 1.2;
+                return sa;
+            }
+        }
+       
+        console.log(Employee.print());
+        console.log("" + Employee.calculate().toFixed(2));
+    </script>
+
+</body>
+</html>
